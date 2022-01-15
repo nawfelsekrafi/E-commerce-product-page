@@ -1,42 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header>
+      <div class="smallMenu">
+        <img src="./images/icon-menu.svg" alt="" class="list-icon" id="list-icon">
+        <img class="campany-logo" src="./images/logo.svg" alt="Sneakers logo" />
+      </div>
+      
+      <menu class="menu">
+        <li class="menu-item">Collections</li>
+        <li class="menu-item">Men</li>
+        <li class="menu-item">Women</li>
+        <li class="menu-item">About</li>
+        <li class="menu-item">Contact</li>
+      </menu>
+      <div class="profileCart">
+        <div>
+          <img class="cart-btn" id="cart-btn" src="./images/icon-cart.svg" alt="cart button" />
+          <div id="number-product"></div>
+        </div>
+        
+        <img
+          class="profile-pic"
+          src="./images/image-avatar.png"
+          alt="profile picture"
+        />
+      </div>
+    </header>
+    <hr />
+    <main>
+      <div class="gallery">
+        <div class="gallery-main" >
+          <img
+            src="./images/image-product-1.jpg"
+            alt="product image"
+            class="product-image"
+            id="gallery-main"
+          />
+        </div>
+        <div class="gallery-collection">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="product image thumbnail"
+            class="product-image-thumbnail i"
+          />
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="product image thumbnail"
+            class="product-image-thumbnail i"
+          />
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="product image thumbnail"
+            class="product-image-thumbnail i"
+          />
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="product image thumbnail"
+            class="product-image-thumbnail i"
+          />
+        </div>
+      </div>
+      <div class="main-content">
+        <h1 class="campany-name">SNEAKER COMPANY</h1>
+        <h2 class="product-name">Fall Limited Edition<br>Sneakers</h2>
+        <p class="discription">
+          These low-profile sneakers are your perfect casual wear
+          companion. Featuring a durable rubber outer sole, they’ll withstand
+          everything the weather can offer.
+        </p>
+        <div class="price-container">
+          <div>
+            <p class="price">$125.00</p>
+            <span class="price-off">50%</span>
+          </div>
+          <p class="initial-price">$250.00</p>
+        </div>
+        <div class="add-to-cart-container">
+          <div class="quantity-container">
+            <img src="./images/icon-minus.svg" alt="decrement quantity" id="minus" />
+            <p class="quantity" id="quantity">0</p>
+            <img src="./images/icon-plus.svg" alt="increment quantity" id="plus" />
+          </div>
+          <button class="add-to-cart-btn" id="add-to-cart-btn">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      <div id= "cart-modal" class="cart-modal">
+        <p class="cart-modal-title">
+          Cart
+        </p>
+        <hr id="cart-hr">
+        <div id="cart-empty">
+          <p>Your cart is empty.</p>
+        </div>
+        <div id="product-checkout">
+        <div class="product-div">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" class="cart-product">
+          <div class="cart-product-details">
+            <p id="product-title">Fall Limited Edition Sneakers</p>
+            <p>$125 x  <span id="cart-quantity-value">3</span> <span id="total-price">$375.00</span></p>
+          </div>
+          <img src="./images/icon-delete.svg" alt="delete product from cart" class="delete-product" id="delete-product">
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+    </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <style>
- 
-  </style>
-</head>
-<body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#" target="_blank">Nawfel Sekrafi</a>.
-  </div>
-</body>
+    <div class="pictures-modal" id ="pictures-modal">
+      <svg width="14" class="close-modal" id="close-modal" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+      <div class="gallery-main">
+        <svg width="13" class="arrows" id="previews" style="transform: rotate(180deg);" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        <img
+          src="./images/image-product-1.jpg"
+          alt="product image"
+          class="product-image"
+          id="gallery-main-2"
+        />
+        <svg width="13" class="arrows" id="next" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="gallery-collection">
+        <img
+          src="./images/image-product-1-thumbnail.jpg"
+          alt="product image thumbnail"
+          class="product-image-thumbnail m"
+        />
+        <img
+          src="./images/image-product-2-thumbnail.jpg"
+          alt="product image thumbnail"
+          class="product-image-thumbnail m"
+        />
+        <img
+          src="./images/image-product-3-thumbnail.jpg"
+          alt="product image thumbnail"
+          class="product-image-thumbnail m"
+        />
+        <img
+          src="./images/image-product-4-thumbnail.jpg"
+          alt="product image thumbnail"
+          class="product-image-thumbnail m"
+        />
+      </div>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.linkedin.com/in/nawfel-sekrafi-874167172/" target="_blank">Nawfel Sekrafi</a>.
+      </div>
+      <div class="product-image-modal"></div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
 </html>
