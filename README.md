@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-Thanks for checking out this front-end coding solution ❤.
+Thanks for checking out this front-end coding solution ❤. (please press f11 or activate full screen view to have the optimal experience)
 
 ## Table of contents
 
