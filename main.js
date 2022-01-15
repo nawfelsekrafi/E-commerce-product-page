@@ -10,6 +10,8 @@ var quantity = 0;
 var nextImageBtn = document.getElementById('next');
 var previewsImageBtn = document.getElementById('previews');
 var currentImg = 0;
+var nextImageBtnMobile = document.getElementById('next-mobile');
+var previewsImageBtnMobile = document.getElementById('previews-mobile');
 
 var Images = [
  "image-product-1.jpg" ,
@@ -48,6 +50,29 @@ previewsImageBtn.addEventListener('click', function(){
         document.getElementById("gallery-main-2").src  = "./images/" + Images[currentImg]; 
     }
 });
+
+nextImageBtnMobile.addEventListener('click', function(){
+    if(currentImg<3){
+        currentImg++;
+        document.getElementById("gallery-main").src = "./images/" + Images[currentImg]; 
+    }else {
+        currentImg = 0;
+        document.getElementById("gallery-main").src  = "./images/" + Images[currentImg]; 
+    }
+
+});
+
+previewsImageBtnMobile.addEventListener('click', function(){
+    if(currentImg>0){
+        currentImg--;
+        document.getElementById("gallery-main").src  = "./images/" + Images[currentImg]; 
+    }else {
+        currentImg = 3;
+        document.getElementById("gallery-main").src  = "./images/" + Images[currentImg]; 
+    }
+});
+
+
 closeBtn.addEventListener("click", function () {
   document.getElementById("pictures-modal").style.visibility = "hidden";
 });

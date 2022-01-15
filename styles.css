@@ -254,6 +254,9 @@ button > svg {
   bottom: 25px;
   left: 6%;
 }
+.arrows-mobile {
+  display:none;
+}
 
 .pictures-modal {
   background-color: hsla(220, 13%, 13%, 0.8);
@@ -410,6 +413,33 @@ footer {
 }
 
 @media screen and (max-width: 921px) {
+  .gallery-main{
+    position: relative;
+  }
+  .arrows-mobile {
+    display: block;
+    position: absolute;
+  }
+
+  #previews-mobile {
+    top:50%;
+    left: 10%;
+    background-color: var(--white);
+    border-radius: 100%;
+    width: 16px;
+    margin: 0 -24px 0 -24px;
+    padding: 17px 17px 17px 17px;
+  }
+  #next-mobile {
+    top:50%;
+    right:10%;
+    background-color: var(--white);
+    border-radius: 100%;
+    width: 16px;
+    margin: 0 -24px 0 -24px;
+    padding: 17px 17px 17px 17px;
+  }
+
   .list-icon {
     display: block;
     margin-top: 20px;
